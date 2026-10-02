@@ -1,0 +1,77 @@
+
+==============================================================================
+1. Estrutura e qualidade
+==============================================================================
+oportunidades: 8800
+deal_stage
+Won            4238
+Lost           2473
+Engaging       1589
+Prospecting     500
+produto "GTXPro" (não existe em products.csv): 1480
+deals abertos sem conta: 1425
+Prospecting sem engage_date: 500
+vendedores sem nenhum deal: ['Carl Lin', 'Carol Thompson', 'Elizabeth Anderson', 'Mei-Mei Johns', 'Natalya Ivanova']
+close_date vai de 2017-03-01 a 2017-12-31 → perdas antes de mar/2017 não existem; coorte de 2016 fica inflada:
+              mean  count
+engage_date              
+2016Q4       0.820    305
+2017Q1       0.679   1322
+2017Q2       0.616   2022
+2017Q3       0.600   2012
+2017Q4       0.607   1050
+
+==============================================================================
+2. Win rate por dimensão (fechados a partir de 2017)
+==============================================================================
+win rate geral: 0.623
+sales_agent      faixa 0.54–0.70   qui-quadrado p=0.325
+product          faixa 0.58–0.64   qui-quadrado p=0.453
+account          faixa 0.51–0.75   qui-quadrado p=0.912
+sector           faixa 0.60–0.64   qui-quadrado p=0.907
+regional_office  faixa 0.62–0.63   qui-quadrado p=0.692
+manager          faixa 0.61–0.63   qui-quadrado p=0.913
+
+==============================================================================
+3. Previsão fora da amostra (treina fechados até jul/17, testa ago–dez/17)
+==============================================================================
+sales_agent  AUC = 0.504   (0,50 = cara ou coroa)
+product      AUC = 0.501   (0,50 = cara ou coroa)
+account      AUC = 0.483   (0,50 = cara ou coroa)
+sector       AUC = 0.510   (0,50 = cara ou coroa)
+receita conta AUC = 0.489
+preço        AUC = 0.502
+
+==============================================================================
+4. Valor: close_value vs preço de tabela (ganhos)
+==============================================================================
+count    4238.000
+mean        0.996
+std         0.099
+min         0.657
+25%         0.929
+50%         0.998
+75%         1.063
+max         1.342
+
+==============================================================================
+5. Tempo: ciclo dos fechados e idade dos abertos
+==============================================================================
+ciclo dos ganhos, percentis: {0.5: 49.0, 0.75: 85.0, 0.9: 103.0, 0.95: 114.0, 0.99: 128.0}
+maior ciclo de qualquer deal fechado: 138
+               deals    valor
+relogio                      
+saudável         110   227651
+esfriando        103   281416
+última chance     85   184498
+zumbi           1291  3198664
+zumbis: 1291 de 1589 (81%) — US$ 3,198,664 de US$ 4,966,215 em aberto
+
+==============================================================================
+6. Teste anti-armadilha: o limite de 138 dias é falta de janela?
+==============================================================================
+coorte 2017-03: janela de 305 dias, maior ciclo 121, 137 ainda abertos
+coorte 2017-04: janela de 274 dias, maior ciclo 132, 121 ainda abertos
+coorte 2017-05: janela de 244 dias, maior ciclo 136, 134 ainda abertos
+coorte 2017-06: janela de 213 dias, maior ciclo 124, 111 ainda abertos
+→ os deals fecham em até ~4 meses ou travam: o limite não é artefato da janela.

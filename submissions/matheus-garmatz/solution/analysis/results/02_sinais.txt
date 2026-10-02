@@ -1,0 +1,76 @@
+
+==============================================================================
+1. Calendário: mês do trimestre em que o deal fecha
+==============================================================================
+      mean  count
+moq              
+1    0.490   1779
+2    0.547   2358
+3    0.805   2269
+vendedores com 3º mês > 1º mês: 30 de 30
+moq                  1      2      3
+regional_office                     
+Central          0.502  0.526  0.819
+East             0.487  0.567  0.765
+West             0.478  0.555  0.824
+→ sinal forte, mas vale para TODOS os deals ao mesmo tempo: não muda a ordem da fila.
+
+==============================================================================
+2. FALSO SINAL #1: "passou das 2 primeiras semanas, ganha mais"
+==============================================================================
+ciclo >   0 dias: win rate 0.615
+ciclo >  14 dias: win rate 0.675
+ciclo >  60 dias: win rate 0.674
+ciclo >  90 dias: win rate 0.708
+controlando pelo mês do trimestre:
+moq           1     2     3
+cb                         
+(0, 14]    0.49  0.51  0.83
+(14, 60]    NaN  0.57  0.80
+(60, 140]   NaN  0.55  0.80
+ciclo sozinho prevendo o futuro: AUC 0.542
+→ era o calendário: dentro de cada mês do trimestre, a diferença some.
+
+==============================================================================
+3. Outras variáveis (qui-quadrado)
+==============================================================================
+dow              p=0.277
+employees        p=0.345
+revenue          p=0.064
+year_established p=0.697
+empresa-mãe      p=0.813
+product × sector: p=0.912
+sales_agent × product: p=0.274
+sales_agent × sector: p=0.405
+
+==============================================================================
+4. Histórico (só o que era conhecido na data de engajamento)
+==============================================================================
+acc_wr   AUC 0.471  (n=5084)
+ag_wr    AUC 0.485  (n=5084)
+form30   AUC 0.485  (n=5073)
+load     AUC 0.501  (n=5084)
+
+==============================================================================
+5. Machine learning com tudo que se sabe no engajamento
+==============================================================================
+acerto (AUC) no passado que ele viu: 0.997
+acerto (AUC) no futuro:              0.507
+→ decorou o passado, não aprendeu nada que sirva para o futuro.
+
+==============================================================================
+6. FALSO SINAL #2: "primeiro deal do vendedor com a conta ganha mais"
+==============================================================================
+           mean  count
+primeiro              
+False     0.610   4851
+True      0.645    888
+controlando pelo trimestre de fechamento:
+             mean        count      
+primeiro    False  True  False True 
+close_date                          
+2017Q1      0.913  0.894    23    85
+2017Q2      0.610  0.617   970   629
+2017Q3      0.614  0.619  1908   139
+2017Q4      0.602  0.657  1950    35
+→ de novo o calendário: os "primeiros deals" se concentravam nos meses de mais vitória.

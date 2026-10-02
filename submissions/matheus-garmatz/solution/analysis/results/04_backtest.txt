@@ -1,0 +1,56 @@
+
+==============================================================================
+1. Receita que veio do foco (top 10 por vendedor, 4 datas, 90 dias)
+==============================================================================
+                                                           receita   ganhos  deals  zumbis  acerto
+estrategia                                                                                        
+Nossa lógica (valor × chance pela idade)                2346145.00  444.000   1200   0.010   0.370
+Só ordenar por valor                                    2090131.00  383.000   1200   0.129   0.319
+"Baseline de IA" (valor × win rate vendedor × produto)  2085209.00  385.000   1200   0.123   0.321
+Mais novos primeiro                                     1109819.00  481.000   1200   0.000   0.401
+Aleatório (o "feeling", média de 200 sorteios)           873778.94  380.665   1200   0.135   0.317
+Mais antigos primeiro                                    549131.00  278.000   1200   0.528   0.232
+
+por data:
+t                                                       2017-07-01  2017-08-01  2017-09-01  2017-10-01
+estrategia                                                                                            
+"Baseline de IA" (valor × win rate vendedor × produto)    649512.0    615887.0    440054.0    379756.0
+Aleatório (o "feeling", média de 200 sorteios)            276352.0    241968.0    186490.0    168969.0
+Mais antigos primeiro                                     148373.0    148373.0    197694.0     54691.0
+Mais novos primeiro                                       339458.0    197417.0    240042.0    332902.0
+Nossa lógica (valor × chance pela idade)                  630989.0    709099.0    535899.0    470158.0
+Só ordenar por valor                                      636803.0    615633.0    432330.0    405365.0
+
+==============================================================================
+2. Comparação pareada: nossa lógica vs "só valor", vendedor a vendedor, mês a mês
+==============================================================================
+melhor: 56  igual: 51  pior: 13
+ganho médio por vendedor/mês: US$ 3,686  (IC 95%: US$ 2,500 a 4,812)
+
+==============================================================================
+3. Chance de ganhar em 90 dias por idade (aprendida até out/2017) → usada no app
+==============================================================================
+         chance_90d  ganhos  casos
+band                              
+0-14          0.430     658   1532
+15-30         0.459     594   1294
+31-60         0.485     999   2056
+61-90         0.470     643   1366
+91-120        0.362     244    677
+121-138       0.165      22    165
+>138          0.030       0    264
+
+==============================================================================
+4. Forecast da receita dos deals abertos nos 90 dias seguintes
+==============================================================================
+2017-07-01  real US$ 1,427 mil | ingênuo 2,614 mil (+83%) | ajustado 2,028 mil (+42%)
+2017-08-01  real US$ 1,719 mil | ingênuo 3,409 mil (+98%) | ajustado 2,374 mil (+38%)
+2017-09-01  real US$ 1,303 mil | ingênuo 3,341 mil (+156%) | ajustado 2,061 mil (+58%)
+2017-10-01  real US$ 1,233 mil | ingênuo 3,573 mil (+190%) | ajustado 1,969 mil (+60%)
+
+==============================================================================
+5. Receita de deals que abrem e fecham no mesmo trimestre (a parte previsível)
+==============================================================================
+2017Q2: US$ 1.53 mi
+2017Q3: US$ 1.54 mi
+2017Q4: US$ 1.55 mi

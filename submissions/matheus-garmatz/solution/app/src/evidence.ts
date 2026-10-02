@@ -10,20 +10,20 @@ export const BACKTEST = [
   { name: 'Só ordenar por valor', revenue: 2090131, zombieShare: 0.13 },
   { name: '"Baseline de IA" (valor × win rate vendedor/produto)', revenue: 2085209, zombieShare: 0.12 },
   { name: 'Mais novos primeiro', revenue: 1109819, zombieShare: 0 },
-  { name: 'Aleatório (o "feeling")', revenue: 874298, zombieShare: 0.14 },
+  { name: 'Aleatório (o "feeling")', revenue: 873779, zombieShare: 0.14 },
   { name: 'Mais antigos primeiro', revenue: 549131, zombieShare: 0.53 },
 ];
 
-export const PAIRED = { better: 56, equal: 51, worse: 13, gainPerSellerMonth: 3686, ciLow: 2598, ciHigh: 4863 };
+export const PAIRED = { better: 56, equal: 51, worse: 13, gainPerSellerMonth: 3686, ciLow: 2500, ciHigh: 4812 };
 
 export const FORECAST_BACKTEST = { naiveError: '+83% a +190%', adjustedError: '+38% a +60%' };
 
 export const DISCARDED: [string, string][] = [
-  ['Win rate do vendedor, produto, conta, setor, região', 'Não prevê o resultado em dados futuros (AUC 0,47–0,51 — 0,50 é cara ou coroa)'],
-  ['Modelo de machine learning com todas as variáveis', '99,8% de acerto no passado, 50,5% no futuro — decorou, não aprendeu'],
+  ['Win rate do vendedor, produto, conta, setor, região', 'Não prevê o resultado em dados futuros (AUC 0,47–0,51; 0,50 = cara ou coroa)'],
+  ['Modelo de machine learning com todas as variáveis', '99,7% de acerto no passado, 50,7% no futuro — decorou, não aprendeu'],
   ['"Vendedor X é bom no produto Y"', 'Não se repete de um semestre para o outro (correlação −0,01)'],
   ['Histórico da conta, fase recente do vendedor, carga de deals, dia da semana', 'Sem sinal'],
-  ['"Primeiro deal com a conta ganha mais"', 'Parecia +5 pontos; sumiu ao controlar pelo trimestre (efeito do calendário)'],
+  ['"Primeiro deal com a conta ganha mais"', 'Parecia +3,5 pontos; sumiu ao controlar pelo trimestre (efeito do calendário)'],
   ['Fim de trimestre (80% de vitória no 3º mês vs 49% no 1º)', 'Sinal forte, mas vale para todos os deals ao mesmo tempo → não muda a ordem; vira contexto'],
 ];
 

@@ -1,0 +1,53 @@
+
+==============================================================================
+1. O que explica a diferença de receita entre vendedores
+==============================================================================
+volume (deals fechados)  explica 46% da variação de receita
+ticket/mix               explica 28% da variação de receita
+conversão                explica 1% da variação de receita
+concentração: Darcel Schlecht = US$ 1,153,214 (11.5% da receita), 553 deals fechados
+
+==============================================================================
+2. O que se repete de um semestre para o outro (traço estável vs sorte)
+==============================================================================
+volume    r=0.95 (p=0.000)
+ticket    r=0.71 (p=0.000)
+win rate  r=0.35 (p=0.061)
+"vendedor X é bom no produto Y": r=-0.006 (p=0.96)
+participação de cada produto nos deals de cada vendedor (mín–máx):
+product  GTK 500  GTX Basic  GTX Plus Basic  GTX Plus Pro  GTX Pro  MG Advanced  MG Special
+min         0.00       0.00            0.03          0.02     0.00         0.06        0.03
+max         0.09       0.42            0.32          0.31     0.48         0.52        0.63
+vender mais um produto → converter melhor nele? r=0.05
+
+==============================================================================
+3. Contas: dono, disputa e deals duplicados
+==============================================================================
+vendedores por conta: média 14.8; gerentes 4.9; escritórios 2.8
+vendedor que mais fatura numa conta fica com 25% dela (mediana)
+pares de deals simultâneos (mesma conta + produto, vendedores diferentes): 16694
+  entre escritórios: 4769 | mesmo escritório, outro gerente: 5820 | mesma equipe: 6105
+  pares em que OS DOIS ganharam: 5149  ← bloquear o 2º mataria receita
+pares conta+produto abertos com 2+ vendedores: 182 de 372 (49%)
+
+==============================================================================
+4. "Ressuscitados" (proxy): nova oportunidade na mesma conta + produto depois de uma perda
+==============================================================================
+reabertos: 4516; win rate 0.617 vs média 0.615
+reaberto pelo mesmo vendedor que perdeu: 14%; dias até reabrir (mediana): 29
+(o dataset não guarda histórico de etapas: "o mesmo deal voltou" não é observável)
+
+==============================================================================
+5. Escritório Central e o deal mais valioso
+==============================================================================
+deal_stage       Engaging  Lost  Prospecting   Won
+regional_office                                   
+Central               408   975          500  1629
+East                  433   687            0  1171
+West                  748   811            0  1438
+mês de engajamento dos Engaging abertos do Central: {Period('2017-07', 'M'): 287, Period('2017-08', 'M'): 121}
+GTK 500 abertos: 15 (US$ 401,520); zumbis: 14
+      sales_agent    account  age
+  Rosalina Dieter Betasoloin   95
+     Elease Gluck        NaN  150
+Marty Freudenburg        NaN  152
