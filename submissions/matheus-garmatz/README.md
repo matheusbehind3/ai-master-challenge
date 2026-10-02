@@ -5,7 +5,7 @@
 - **Nome:** Matheus Garmatz
 - **LinkedIn:** [linkedin.com/in/matheus-garmatz](https://www.linkedin.com/in/matheus-garmatz/)
 - **Challenge escolhido:** 003 — Lead Scorer (Vendas / RevOps)
-- **App no ar:** _[link da Vercel]_ · **Vídeo (3 min):** _[link]_
+- **App no ar:** **[radar-de-pipeline.vercel.app](https://radar-de-pipeline.vercel.app)** · **Vídeo (3 min):** _[link]_
 
 ---
 
@@ -63,7 +63,8 @@ cd submissions/matheus-garmatz/solution/app
 npm install
 npm run dev      # http://localhost:5173
 npm test         # 12 testes com os dados reais
-npm run build    # produção (deploy: Vercel, root = solution/app, preset Vite)
+npm run build    # produção
+npx vercel deploy --prod   # deploy (Vercel detecta Vite sozinha)
 ```
 
 Análise (Python 3.10+): `cd solution/analysis && pip install -r requirements.txt && ./run_all.sh`
