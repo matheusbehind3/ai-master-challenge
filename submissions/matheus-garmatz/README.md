@@ -5,7 +5,7 @@
 - **Nome:** Matheus Garmatz
 - **LinkedIn:** [linkedin.com/in/matheus-garmatz](https://www.linkedin.com/in/matheus-garmatz/)
 - **Challenge escolhido:** 003 — Lead Scorer (Vendas / RevOps)
-- **App no ar:** **[radar-de-pipeline.vercel.app](https://radar-de-pipeline.vercel.app)** · **Vídeo (3 min):** _[link]_
+- **App no ar:** **[radar-de-pipeline.vercel.app](https://radar-de-pipeline.vercel.app)** · **Vídeo (3 min):** **[youtu.be/LVztPy_NK4Q](https://youtu.be/LVztPy_NK4Q)**
 
 ---
 
@@ -139,7 +139,7 @@ Análise (Python 3.10+): `cd solution/analysis && pip install -r requirements.tx
 - [x] Protótipo intermediário: [process-log/prototipo-v0.html](process-log/prototipo-v0.html)
 - [x] Scripts e saídas da análise: [solution/analysis/](solution/analysis/)
 - [x] Chat export — trechos da conversa com a IA, com minhas mensagens literais: [process-log/chat-exports/trechos-da-conversa.md](process-log/chat-exports/trechos-da-conversa.md)
-- [ ] Vídeo do workflow: _[link]_
+- [x] Vídeo (3 min) — a ferramenta e o raciocínio: [youtu.be/LVztPy_NK4Q](https://youtu.be/LVztPy_NK4Q)
 
 ---
 
