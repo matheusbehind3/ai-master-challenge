@@ -1,6 +1,6 @@
 # Process log — como cheguei na solução
 
-Ferramenta principal: **Claude (Cowork)**, numa única conversa longa, com acesso a um ambiente Python/Node e ao meu computador. Abaixo, cada iteração: o que eu pedi, o que a IA fez, o que deu errado e o que mudou por causa disso. Os prints da conversa estão em [`screenshots/`](screenshots/); o histórico de commits desta branch mostra a construção.
+Ferramenta principal: **Claude (Cowork)**, numa única conversa longa, com acesso a um ambiente Python/Node e ao meu computador. Abaixo, cada iteração: o que eu pedi, o que a IA fez, o que deu errado e o que mudou por causa disso. Os trechos da conversa (com minhas mensagens literais) estão em [`chat-exports/`](chat-exports/trechos-da-conversa.md); o histórico de commits desta branch mostra a construção.
 
 ---
 

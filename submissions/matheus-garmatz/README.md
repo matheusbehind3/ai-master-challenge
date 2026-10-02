@@ -3,7 +3,7 @@
 ## Sobre mim
 
 - **Nome:** Matheus Garmatz
-- **LinkedIn:** _[adicionar]_
+- **LinkedIn:** [linkedin.com/in/matheus-garmatz](https://www.linkedin.com/in/matheus-garmatz/)
 - **Challenge escolhido:** 003 — Lead Scorer (Vendas / RevOps)
 - **App no ar:** _[link da Vercel]_ · **Vídeo (3 min):** _[link]_
 
@@ -137,7 +137,7 @@ Análise (Python 3.10+): `cd solution/analysis && pip install -r requirements.tx
 - [x] Narrativa do processo: [process-log/README.md](process-log/README.md)
 - [x] Protótipo intermediário: [process-log/prototipo-v0.html](process-log/prototipo-v0.html)
 - [x] Scripts e saídas da análise: [solution/analysis/](solution/analysis/)
-- [ ] Screenshots das conversas com IA: [process-log/screenshots/](process-log/screenshots/)
+- [x] Chat export — trechos da conversa com a IA, com minhas mensagens literais: [process-log/chat-exports/trechos-da-conversa.md](process-log/chat-exports/trechos-da-conversa.md)
 - [ ] Vídeo do workflow: _[link]_
 
 ---
